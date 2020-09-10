@@ -10,9 +10,9 @@ pulumi program written in python to create a namespace in a K8s cluster and depl
 
 ## Installation
 Clone this Git Repository
-’’’bash
+'''bash
 git clone https://github.com/chrisley75/pulumi_deploy_k8s_botkube_ChatOps
-’’’
+'''
 
 ## Manual installation
 Create a folder
