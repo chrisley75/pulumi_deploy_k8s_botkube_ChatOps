@@ -1,0 +1,7 @@
+name: k8s-apps-chatops-botkube
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Kubernetes python Pulumi programm to deploy ChatOps "BOTKube" using helm
+  charts (https://www.botkube.io/configuration/)
