@@ -1,4 +1,7 @@
-#https://www.pulumi.com/docs/get-started/kubernetes/modify-program/
+## Python Pulumi program to Create K8s namesaoce and to deploy ChatOps in the K8s cluster
+## Christopher LEY - Sept 2020 
+## https://github.com/chrisley75/pulumi_deploy_k8s_botkube_ChatOps
+## https://www.pulumi.com/docs/get-started/kubernetes/modify-program/
 
 import pulumi
 from pulumi_kubernetes.apps.v1 import Deployment
@@ -6,7 +9,7 @@ from pulumi_kubernetes.core.v1 import Service
 from pulumi_kubernetes.helm.v3 import Chart, ChartOpts, FetchOpts
 import pulumi_kubernetes as kubernetes
 
-# Recuperation des variables configurer via pulumi set config (ex: pulumi config set CLUSTER_NAME k8schrisley)
+# Recuperation et declaration des variables qui ont été configurées dans pulumi (ex: pulumi config set CLUSTER_NAME k8schrisley)
 config = pulumi.Config()
 ALLOW_KUBECTL = config.require("ALLOW_KUBECTL")
 CLUSTER_NAME = config.require("CLUSTER_NAME")
@@ -52,6 +55,7 @@ botkube = Chart(
    )
 )
 
+# DEBUG VARS
 print(ALLOW_KUBECTL)
 print(config.require("ALLOW_KUBECTL"))
 print(SLACK_API_TOKEN)
@@ -59,4 +63,3 @@ print(config.require_secret("SLACK_API_TOKEN"))
 print(CLUSTER_NAME)
 print(config.require("CLUSTER_NAME"))
 
-#pulumi.export(botkube_namespace.metadata["name"])

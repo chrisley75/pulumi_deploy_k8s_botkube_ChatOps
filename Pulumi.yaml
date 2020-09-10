@@ -4,4 +4,4 @@ runtime:
   options:
     virtualenv: venv
 description: Kubernetes python Pulumi programm to deploy ChatOps "BOTKube" using helm
-  charts (https://www.botkube.io/configuration/)
+  charts (https://www.botkube.io/configuration/) - Christopher LEY
