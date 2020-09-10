@@ -11,21 +11,21 @@ pulumi program written in python to create a namespace in a K8s cluster and depl
 ## Installation
 Clone this Git Repository
 '''bash
-git clone https://github.com/chrisley75/pulumi_deploy_k8s_botkube_ChatOps
+$git clone https://github.com/chrisley75/pulumi_deploy_k8s_botkube_ChatOps
 '''
 
 ## Manual installation
 Create a folder
 
 ```bash
-mkdir <folder> && cd <folder>
+$mkdir <folder> && cd <folder>
 ```
 
 Init a new pulumi stack and configure as a new kubernetes-python 
 ```bash
-pulumi stack init
-pulumi new kubernetes-python
-```bash
+$pulumi stack init
+$pulumi new kubernetes-python
+```
 
 Replace __main__.py with the one in this Github repository
 
@@ -33,10 +33,10 @@ Replace __main__.py with the one in this Github repository
 ## Configuration
 Set pulumi environment variables with your environment information.
 ```bash
-pulumi config set SLACK_CHANNEL_NAME <SLACK_CHANNEL>
-pulumi config set CLUSTER_NAME <Cluster_Name>
-pulumi config set ALLOW_KUBECTL True
-pulumi config set --secret SLACK_API_TOKEN <TOKEN>
+$pulumi config set SLACK_CHANNEL_NAME <SLACK_CHANNEL>
+$pulumi config set CLUSTER_NAME <Cluster_Name>
+$pulumi config set ALLOW_KUBECTL True
+$pulumi config set --secret SLACK_API_TOKEN <TOKEN>
 ```
 
 Check the configured variables
@@ -50,7 +50,7 @@ SLACK_CHANNEL_NAME  <SLACK_CHANNEL>
 ```
 or to visualize encrypt vars
 ```bash
-pulumi config --show-secrets
+$pulumi config --show-secrets
 ```
 
 ## Deploy the ChatOps BotKube with Pulumi
