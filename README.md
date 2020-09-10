@@ -7,7 +7,7 @@ ChatOps is a way to execute DevOps tasks, such as deployments, monitoring and sy
 
 This offers a few important advantages:
 
-* A very human way to manage your infrastructure, by chatting with a bot. @chatbot logs is much easier to understand than kubectl logs hello-minikube-64b64df8c9-fkb6w -ndefault
+* A very human way to manage your infrastructure, by chatting with a bot.
 * It can be part of a shared chat, so that people can collaborate and share information. This also offers a record of executed commands and actions.
 * It can help safely overcome network and firewall restrictions to make working from home or on the go possible.
 * A unified interface over DevOps tools, manage Kubernetes and OpenShift with the same interfaceIt can simplify and secure infrastructure tasks, so they can be done by the developers themselves.
@@ -24,9 +24,9 @@ This offers a few important advantages:
 
 ## Installation
 Clone this Git Repository
-'''bash
+```bash
 $git clone https://github.com/chrisley75/pulumi_deploy_k8s_botkube_ChatOps
-'''
+```
 
 ## Manual installation
 Create a folder
@@ -125,6 +125,26 @@ Resources:
 
 Duration: 12s
 ```
+
+If everything went well, the deployment appears directly in your ChatOps and it is now possible to view and manage the cluster (or several clusters) from the channel.
+![k8s cluster appears in the channel](docs/deploy_ok.png)
+
+## Manage Kubernetes cluster with Chat
+
+Check cluster ready
+![k8s ping from chat](docs/ping.png)
+
+Kubectl command to get namespace on the cluster
+![k8s get namespace](docs/getns.png)
+
+Get state of the creation on resource in the cluster
+![Resource creation monitor](docs/creation.png)
+
+be automatically alerted in case of a problem on the cluster
+![Resource creation monitor](docs/errors.png)
+
+and so many other possibilities.....
+
 
 ## Delete and remove app
 This action will delete the app and the namespace in the K8s cluster (Only resources created by this program), but not the stack in pulumi
