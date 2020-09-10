@@ -5,8 +5,15 @@ from pulumi_kubernetes.apps.v1 import Deployment
 from pulumi_kubernetes.core.v1 import Service
 from pulumi_kubernetes.helm.v3 import Chart, ChartOpts, FetchOpts
 
-# Deploy BOTKube chatops
+# Create a K8s namespace.
+# Create dedicated namespace for ChatOps
+dev_namespace = kubernetes.core.v1.Namespace(
+    "BotKubeNamespace",
+    metadata={
+        "name": "botkube",
+    })
 
+# Deploy BOTKube chatops
 botkube = Chart(
    'botkube', 
    ChartOpts(
