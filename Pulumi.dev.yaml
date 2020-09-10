@@ -1,6 +1,0 @@
-config:
-  k8s-apps-chatops-botkube:ALLOW_KUBECTL: "True"
-  k8s-apps-chatops-botkube:CLUSTER_NAME: k8schrisley
-  k8s-apps-chatops-botkube:SLACK_API_TOKEN:
-    secure: AAABAA687lowOBnSxHlUf5QVg4vfIwu6GAfF2ZnreTVJPpz4zXRdImXbFclhrm71KHZ7tPnQigWuLBnBSdLXVKJQUvksv8Z5W+il5K9Dxk5KS2VJPLLHaYE=
-  k8s-apps-chatops-botkube:SLACK_CHANNEL_NAME: chatops

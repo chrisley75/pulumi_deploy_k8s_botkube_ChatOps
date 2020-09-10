@@ -131,16 +131,16 @@ If everything went well, the deployment appears directly in your ChatOps and it 
 
 ## Manage Kubernetes cluster with Chat
 
-Check cluster ready
+Check cluster is ready:
 ![k8s ping from chat](docs/ping.png)
 
-Kubectl command to get namespace on the cluster
+Kubectl command to get namespace on the cluster:
 ![k8s get namespace](docs/getns.png)
 
-Get state of the creation on resource in the cluster
+Get state of the creation on resource in the cluster:
 ![Resource creation monitor](docs/creation.png)
 
-be automatically alerted in case of a problem on the cluster
+be automatically alerted in case of a problem on the cluster:
 ![Resource creation monitor](docs/errors.png)
 
 and so many other possibilities.....
