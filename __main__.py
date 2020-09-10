@@ -19,9 +19,9 @@ botkube = Chart(
 #     ),
      values={
        'communications.slack.enabled': 'true',
-       'communications.slack.channel': 'chatops',
-       'communications.slack.token': 'xoxb-1349221428866-1361852017825-hmvgOOdtb71FmCPWngAjjN9H',
-       'config.settings.clustername': 'akspulu',
+       'communications.slack.channel': '<SLACK_CHANNEL_NAME>',
+       'communications.slack.token': '<SLACK_API_TOKEN_FOR_THE_BOT>',
+       'config.settings.clustername': '<CLUSTER_NAME>',
        'config.settings.allowkubectl': 'true' 
      },
     ),
