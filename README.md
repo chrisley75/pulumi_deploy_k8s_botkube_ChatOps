@@ -1,12 +1,8 @@
-# Author
-**Christopher LEY**
-SRE and MultiCloud Architect at IBM - IBM Services - christopher.ley@ibm.com
-
 # Description
 
 pulumi program written in python to create a namespace in a K8s cluster and deploy a bot in it for ChatOps communication (Slack, Mattermost)
 
-# What is ChatOps
+## What is ChatOps
 ChatOps is a way to execute DevOps tasks, such as deployments, monitoring and system management using chat messages. For example sending a logs message to a chatbot retrieves the latest log messages. Or a deployment could be triggered from a chat message.
 
 This offers a few important advantages:
@@ -15,6 +11,9 @@ This offers a few important advantages:
 * It can be part of a shared chat, so that people can collaborate and share information. This also offers a record of executed commands and actions.
 * It can help safely overcome network and firewall restrictions to make working from home or on the go possible.
 * A unified interface over DevOps tools, manage Kubernetes and OpenShift with the same interfaceIt can simplify and secure infrastructure tasks, so they can be done by the developers themselves.
+
+## HLD ChatOps BotKube
+![HLD ChatOps BotKube](docs/botkube.png)
 
 
 ## Prerequisites
@@ -174,4 +173,6 @@ The resources in the stack have been deleted, but the history and configuration 
 If you want to remove the stack completely, run 'pulumi stack rm dev'.
 ```
 
-
+# Author
+**Christopher LEY**
+SRE and MultiCloud Architect at IBM - IBM Services - christopher.ley@ibm.com
