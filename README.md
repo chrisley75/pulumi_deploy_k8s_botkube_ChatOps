@@ -16,44 +16,45 @@ git clone https://github.com/chrisley75/pulumi_deploy_k8s_botkube_ChatOps
 
 ## Manual installation
 Create a folder
-’’’bash
+
+```bash
 mkdir <folder> && cd <folder>
-’’’
+```
 
 Init a new pulumi stack and configure as a new kubernetes-python 
-’’’bash
+```bash
 pulumi stack init
 pulumi new kubernetes-python
-’’’bash
+```bash
 
 Replace __main__.py with the one in this Github repository
 
 
 ## Configuration
 Set pulumi environment variables with your environment information.
-’’’bash
+```bash
 pulumi config set SLACK_CHANNEL_NAME <SLACK_CHANNEL>
 pulumi config set CLUSTER_NAME <Cluster_Name>
 pulumi config set ALLOW_KUBECTL True
 pulumi config set --secret SLACK_API_TOKEN <TOKEN>
-’’’
+```
 
 Check the configured variables
-’’’bash
+```bash
 $ pulumi config
 KEY                 VALUE
 ALLOW_KUBECTL       True
 CLUSTER_NAME        <Cluster_Name>
 SLACK_API_TOKEN     <TOKEN>
 SLACK_CHANNEL_NAME  <SLACK_CHANNEL>
-’’’
+```
 or to visualize encrypt vars
-’’’bash
+```bash
 pulumi config --show-secrets
-’’’
+```
 
 ## Deploy the ChatOps BotKube with Pulumi
-’’’bash
+```bash
 $ pulumi up
 Previewing update (dev)
 
@@ -109,11 +110,11 @@ Resources:
     + 9 created
 
 Duration: 12s
-’’’
+```
 
 ## Delete and remove app
 This action will delete the app and the namespace in the K8s cluster (Only resources created by this program), but not the stack in pulumi
-’’’bash
+```bash
 $ pulumi destroy
 Previewing destroy (dev)
 
@@ -156,6 +157,6 @@ Duration: 18s
 
 The resources in the stack have been deleted, but the history and configuration associated with the stack are still maintained. 
 If you want to remove the stack completely, run 'pulumi stack rm dev'.
-’’’
+```
 
 
