@@ -55,7 +55,7 @@ botkube = Chart(
    )
 )
 
-# DEBUG VARS
+# Verification des variables
 print(ALLOW_KUBECTL)
 print(config.require("ALLOW_KUBECTL"))
 print(SLACK_API_TOKEN)
