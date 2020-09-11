@@ -48,7 +48,7 @@ botkube = Chart(
        "config": {
            "settings": {
              "clustername": CLUSTER_NAME,
-             "allowkubectl": ALLOW_KUBECTL,
+             "allowkubectl": True,
            },
        },
      },
