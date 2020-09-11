@@ -12,9 +12,22 @@ This offers a few important advantages:
 * It can help safely overcome network and firewall restrictions to make working from home or on the go possible.
 * A unified interface over DevOps tools, manage Kubernetes and OpenShift with the same interfaceIt can simplify and secure infrastructure tasks, so they can be done by the developers themselves.
 
-## HLD ChatOps BotKube
-![HLD ChatOps BotKube](docs/botkube.png)
+## BotKube Backend Architecture
 
+source: [BotKube](https://www.botkube.io/architecture/)
+
+![HLD ChatOps BotKube](docs/botkube_architecture.png)
+
+Informer Controller: Registers informers to kube-apiserver to watch events on the configured Kubernetes resources. It forwards the incoming Kubernetes event to the Event Manage
+Event Manager: Extracts required fields from Kubernetes event object and creates a new BotKube event struct. It passes BotKube event struct to the Filter Engine
+Filter Engine: Takes the Kubernetes object and BotKube event struct and runs Filters on them. Each filter runs some validations on the Kubernetes object and modifies the messages in the BotKube event struct if required.
+Event Notifier: Finally, notifier sends BotKube event over the configured communication channel.
+Bot Interface: Bot interface takes care of authenticating and managing connections with communication mediums like Slack, Mattermost. It reads/sends messages from/to commucation mediums.
+Executor: Executes BotKube or kubectl command and sends back the result to the Bot interface.
+
+## BotKube ChatOps interaction in multi-environment
+
+![HLD ChatOps BotKube](docs/botkube.png)
 
 ## Prerequisites
 - Install [BotKube App](https://www.botkube.io/installation/) in your Slack/Mattermost and remember to keep the associated token when creating the app.
