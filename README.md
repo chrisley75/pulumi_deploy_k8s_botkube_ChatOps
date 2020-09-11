@@ -18,12 +18,12 @@ source: [BotKube](https://www.botkube.io/architecture/)
 
 ![HLD ChatOps BotKube](docs/botkube_architecture.png)
 
-Informer Controller: Registers informers to kube-apiserver to watch events on the configured Kubernetes resources. It forwards the incoming Kubernetes event to the Event Manage
-Event Manager: Extracts required fields from Kubernetes event object and creates a new BotKube event struct. It passes BotKube event struct to the Filter Engine
-Filter Engine: Takes the Kubernetes object and BotKube event struct and runs Filters on them. Each filter runs some validations on the Kubernetes object and modifies the messages in the BotKube event struct if required.
-Event Notifier: Finally, notifier sends BotKube event over the configured communication channel.
-Bot Interface: Bot interface takes care of authenticating and managing connections with communication mediums like Slack, Mattermost. It reads/sends messages from/to commucation mediums.
-Executor: Executes BotKube or kubectl command and sends back the result to the Bot interface.
+- **Informer Controller:** Registers informers to kube-apiserver to watch events on the configured Kubernetes resources. It forwards the incoming Kubernetes event to the Event Manage
+- **Event Manager:** Extracts required fields from Kubernetes event object and creates a new BotKube event struct. It passes BotKube event struct to the Filter Engine
+- **Filter Engine:** Takes the Kubernetes object and BotKube event struct and runs Filters on them. Each filter runs some validations on the Kubernetes object and modifies the messages in the BotKube event struct if required.
+- **Event Notifier:** Finally, notifier sends BotKube event over the configured communication channel.
+- **Bot Interface:** Bot interface takes care of authenticating and managing connections with communication mediums like Slack, Mattermost. It reads/sends messages from/to commucation mediums.
+- **Executor:** Executes BotKube or kubectl command and sends back the result to the Bot interface.
 
 ## BotKube ChatOps interaction in multi-environment
 
@@ -145,6 +145,7 @@ If everything went well, the deployment appears directly in your ChatOps and it 
 ## Manage Kubernetes cluster with Chat
 
 Check cluster is ready:
+
 ![k8s ping from chat](docs/ping.png)
 
 Kubectl command to get namespace on the cluster:
